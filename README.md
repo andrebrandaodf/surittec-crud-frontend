@@ -14,22 +14,14 @@ Instalar o angular9 ou superior.
 
 # Executando projeto
 
-1. Entrar na pasta do projeto `surittec-crud` 
-
-`cd surittec-crud`
- 
-2. Executar o servidor spring 
-
-`./mvnw spring-boot:run`
-
-3. Abra outra aba no terminal para executar o frontend
+1. Abra o terminal para executar o frontend
 
 `cd surittec-crud-frontend`
 
-4. Executar o server
+2. Executar o server
 
 `npm start`
 
-5. O serviço estará disponível na URL.
+3. O serviço estará disponível na URL.
 
 http://localhost:4200
