@@ -1,27 +1,35 @@
 # Frontend
+Cadastro de clientes - Avaliação Surittec!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+# Pré requisitos
 
-## Development server
+Instalar o angular9 ou superior.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. [Instalar npm](https://www.npmjs.com/get-npm)
+`npm install`
 
-## Code scaffolding
+2. Instalar angular cli:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install -g @angular/cli`
 
-## Build
+# Executando projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Entrar na pasta do projeto `backend` 
 
-## Running unit tests
+`cd backend`
+ 
+2. Executar o json-server 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`npm start`
 
-## Running end-to-end tests
+3. Abra outra aba no terminal para executar o frontend
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+`cd frontend`
 
-## Further help
+4. Executar o server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`npm start`
+
+5. O serviço estará disponível na URL.
+
+http://localhost:4200
