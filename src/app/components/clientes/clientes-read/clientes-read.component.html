@@ -1,0 +1,40 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="clientes">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Id</th>
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef>Nome</th>
+            <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+        </ng-container>
+        <ng-container matColumnDef="endereco">
+            <th mat-header-cell *matHeaderCellDef>Endereço</th>
+            <td mat-cell *matCellDef="let row" title="{{ row.endereco?.logradouro }}, {{ row.endereco?.bairro }}">
+                {{row.endereco?.localidade}}, {{row.endereco?.uf}} - {{ row.endereco?.cep }}
+            </td>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Ações</th>
+            <td mat-cell *matCellDef="let row">
+                <a routerLink="/clientes/update/{{row.id}}" class="edit">
+                    <i class="material-icons">
+                       edit
+                    </i>
+                </a>
+                <a routerLink="/clientes/delete/{{row.id}}" class="delete">
+                    <i class="material-icons">
+                        delete
+                    </i>
+                </a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>

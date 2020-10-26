@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>Editar Cadastro de Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="ID" [value]="clientes?.id" name="id" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="clientes?.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [value]="clientes?.cpf" name="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cep" (change)="getCep($event.target.value)" [value]="clientes?.endereco?.cep" name="cep">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Logradouro" [value]="clientes?.endereco?.logradouro" name="logradouro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [value]="clientes?.endereco?.bairro" name="bairro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [value]="clientes?.endereco?.localidade" name="localidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Uf" [value]="clientes?.endereco?.uf" name="uf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Complemento" [value]="clientes?.endereco?.complemento" name="complemento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [value]="clientes?.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [value]="clientes?.email" name="email">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="updateClientes()">
+    Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

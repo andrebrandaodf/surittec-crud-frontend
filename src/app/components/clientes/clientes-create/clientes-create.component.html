@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title>Dados Pessoais</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="clientes.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" mask="000.000.000-00" [(ngModel)]="clientes.cpf" name="cpf">
+        </mat-form-field>
+    </form>
+    <mat-card-title>Endereço</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Cep" (change)="getCep($event.target.value)" [(ngModel)]="clientes.endereco.cep" name="cep">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Logradouro" [(ngModel)]="clientes.endereco.logradouro" name="logradouro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Bairro" [(ngModel)]="clientes.endereco.bairro" name="bairro">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="clientes.endereco.localidade" name="localidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="UF" [(ngModel)]="clientes.endereco.uf" name="uf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Complemento" [(ngModel)]="clientes.endereco.complemento" name="complemento">
+        </mat-form-field>
+    </form>
+
+    <mat-card-title>Contatos</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [(ngModel)]="clientes.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="clientes.email" name="email">
+        </mat-form-field>
+    </form>
+</mat-card>
+<button mat-raised-button (click)="createClientes()">
+    Salvar
+</button>
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>

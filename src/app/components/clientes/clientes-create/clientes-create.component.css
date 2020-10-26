@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+button {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 0.2rem;
+    background-color: #4169E1;
+    color: #fff;
+}
