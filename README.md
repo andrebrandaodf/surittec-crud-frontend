@@ -14,17 +14,17 @@ Instalar o angular9 ou superior.
 
 # Executando projeto
 
-1. Entrar na pasta do projeto `backend` 
+1. Entrar na pasta do projeto `surittec-crud` 
 
-`cd backend`
+`cd surittec-crud`
  
-2. Executar o json-server 
+2. Executar o servidor spring 
 
-`npm start`
+`./mvnw spring-boot:run`
 
 3. Abra outra aba no terminal para executar o frontend
 
-`cd frontend`
+`cd surittec-crud-frontend`
 
 4. Executar o server
 
